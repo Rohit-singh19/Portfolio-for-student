@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+:root{
+    --colo-p : #1d1f2eb3;
+    --colo-h : #1d1f2e;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.links{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1000;
+}
+.links i{
+    font-size: 2rem;
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: tomato;
+}
+
+/* ---------------------------header START--------------------------- */
+
+header{
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.width{
+    max-width: 1200px;
+    margin: auto;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Arizonia', cursive;
+    font-weight: 800;
+    font-size: 2rem;
+    color: tomato;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 3.5rem;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #777777;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#menu{
+    display: none;
+    font-size: 1.2rem;
+    color: tomato;
+}
+
+/* ---------------------------header END--------------------------- */
+/* ---------------------------section START--------------------------- */
+section{
+    padding: 3rem 0;
+}
+/* ----------------------hero START----------------------------------- */
+.hero{
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(Images/hero.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content h2{
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero-content small,
+.hero-content span{
+    color: lightcoral;
+}
+
+.btn{
+    padding: 1.2rem 2rem;
+    width: fit-content;
+    background-image: linear-gradient(to right, #f46b45 0%, #d33d13 51%, #f87652 100%);
+    text-transform: uppercase;
+    transition: .5s;
+    background-size: 200% auto;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-position: right center;
+}
+
+/* ----------------------hero END----------------------------------- */
+
+/* ----------------projects START--------------------------- */
+
+.head{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.sub-head{
+    font-size: 1.3rem;
+    color: #666666;
+}
+
+.heading{
+    font-size: 2rem;
+    color: var(--colo-h);
+    font-weight: 900;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    padding: 4rem 0;
+}
+
+.projects>div{
+    width: 100%;
+    min-height: 40vh;
+}
+.pro-img{
+    position: relative;
+}
+
+.pro-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.pro-img .btn{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+.pro-img:hover::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.pro-img:hover .btn{
+    top: 50%;
+    opacity: 1;
+}
+
+.pro-head{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.pro-detail p{
+    font-size: 16px;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    color: var(--colo-p);
+}
+
+.tools{
+    font-size: 1.1rem;
+    letter-spacing: 0;
+}
+
+.tools span{
+    font-weight: 800;
+    color: #000000;
+}
+
+.btn-more{
+    padding: 1.2rem 2rem;
+    background-color: tomato;
+    width: fit-content;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn-more:hover{
+    color: #d2381d;
+    background-color: white;
+}
+
+
+/* ----------------projects END--------------------------- */
+/* ----------------about START--------------------------- */
+#about p{
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    color: var(--colo-p);
+    margin-bottom: .5rem;
+}
+
+/* ----------------about END--------------------------- */
+/* ----------------journey START--------------------------- */
+
+.journey{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.journey-item {
+    display: flex;
+    align-items: center;
+}
+
+.journey-detail{
+    padding: 1.2rem 1rem;
+    background-color: #f2f3f7;
+    width: 100%;
+    margin-top: 5rem;
+    border-radius: 0 10px 10px 10px;
+}
+
+.journey-detail .year{
+    margin-bottom: 2rem;
+    color: #666666;
+}
+
+.journey-detail p{
+    color: var(--colo-p);
+}
+
+.journey-item i{
+    font-size: 2rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 2rem;
+    background-color: #f2f3f7;
+    color: tomato;
+}
+
+.journey-item i::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 23vh;
+    background-color: black;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.journey-item:last-child i::after{
+    display: none;
+}
+
+/* ----------------journey END--------------------------- */
+/* ----------------footer START--------------------------- */
+footer{
+    width: 100%;
+    min-height: 40vh;
+    background-color: #000000;
+    padding: 3rem 1rem;
+}
+
+.foot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    color: white;
+}
+
+.foot-head{
+    color: #444444;
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+footer ul li{
+    display: block;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+footer ul li:hover{
+    color: tomato;
+}
+
+
+
+/* ----------------footer END--------------------------- */
+
+
+/* ---------------------------section END--------------------------- */
+
+
+/* ----------------responsive------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    .width{
+        padding: 0 2rem;
+    }
+    .projects{
+        grid-template-columns: 1fr;
+    }
+    .projects div:nth-child(4){
+        grid-row: 3;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: #000000;
+        padding: 1rem;
+        z-index: 999;
+        padding-top: 4rem;
+    }
+    #menu{
+        display: block;
+        z-index: 1000;
+    }
+    nav.active{
+        display: block;
+        width: 50%;
+    }
+
+    nav ul li{
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    nav ul li a{
+        color: white;
+    }
+}
